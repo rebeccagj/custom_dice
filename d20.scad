@@ -89,7 +89,7 @@ d8textsize = 45;
 d10textsize = 37;
 d00textsize = 37;
 d12textsize = 31;
-d20textsize = 30;
+d20textsize = 33;
 
 //incremental scale
 d10undersize = 30;
@@ -108,8 +108,8 @@ d00underpush6 = 25;
 d00underpush9 = 35;
 d12underpush6 = 13;
 d12underpush9 = 15;
-d20underpush6 = 10;
-d20underpush9 = 10.5;
+d20underpush6 = -12;
+d20underpush9 = -12;
 
 //What dices you would like to draw?
 //dice_to_draw = ["4","6","8","10","00","12","20"];
@@ -122,10 +122,16 @@ dounderscore=[" ", " ", " ", ".  ", "   .", " ", " ", " ", " ", " ", " ", " "]; 
 dotext=["2", "11", "4", "9", "6", "7", "5", "8", "3", "10"];                    //text d12
 d10underscore=[" ", ".  ", " ", " ", " ", " ", "   .", " ", " ", " ", " ", " "];     //underscore d10
 d00underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "];     //underscore d00
-dtext=["0", "9", "8", "1", "2", "7", "6", "3", "4", "5"];                       //text d10
-ddtext=["00", "90", "80", "10", "20", "70", "60", "30", "40", "50"];            //text d00
-underscore=[" ", " ", " ", " ", " ", ".  ", " ", " ",".  ", " ", " ", " ", " ", " ", " "," ", " ", " ", " ", " "];        //underscore d20
-otext=["19", "2", "3", "15", "1", " 9", "7", "8","6", "10", "12", "4", "20", "5", "14","11", "18", "17", "13", "16"];  //text d20
+d10text=["0", "9", "8", "1", "2", "7", "6", "3", "4", "5"];                       //text d10
+d00text=["00", "90", "80", "10", "20", "70", "60", "30", "40", "50"];            //text d00
+underscore=[" ", " ", " ", " ", " ",
+            " ", " ", " ", " ", " ",
+            "   .", " ", "   .", " ", " ",
+            " ", " ", " ", " ", " "];        //underscore d20
+d20text=["12", "1", "16", "4", "20",
+         "15", "3", "11", "17", "13", 
+         "6", "2", "9", "7", "18",
+         "8", "5", "19", "10", "14"];  //text d20
 
 /*Modules section, don't mess with this, if you don't know what you do!*/
 
@@ -358,7 +364,7 @@ module d10draw() {
         difference() {
             dice10(d10size);
             rotate([48, 0, ])
-            dice10text(d10size,d10textsize,d10undersize,d10underpush6,d10underpush9,132,dtext,d10underscore);
+            dice10text(d10size,d10textsize,d10undersize,d10underpush6,d10underpush9,132,d10text,d10underscore);
             
         }
     }
@@ -375,7 +381,7 @@ module d00draw() {
         difference() {
             dice10(d10size);
             rotate([48, 0, ])
-            dice10text(d00size,d00textsize,d00undersize,d00underpush6,d00underpush9,132,ddtext,d00underscore);
+            dice10text(d00size,d00textsize,d00undersize,d00underpush6,d00underpush9,132,d00text,d00underscore);
         }
     }
 }
@@ -499,7 +505,7 @@ module dice20half(height, j) {
         rotate([0, 0, 39])
         translate([0, 0, 0.5 * height - text_depth])
         linear_extrude(height)
-        text(otext[j], size=text_multiplier, valign="center", halign="center", font=font1);
+        text(d20text[j], size=text_multiplier, valign="center", halign="center", font=font1);
 
         rotate([0, 0, 39])
         translate([0, height*d20underpush9/100, 0.5 * height - text_depth])
@@ -513,7 +519,7 @@ module dice20half(height, j) {
             rotate([0, 0, 39])
             translate([0, 0, 0.5 * height - text_depth])
             linear_extrude(height)
-            text(otext[i + j + 1], size=text_multiplier, valign="center", halign="center", font=font1);
+            text(d20text[i + j + 1], size=text_multiplier, valign="center", halign="center", font=font1);
 
             rotate([0, 0, 39])
             translate([0, height*d20underpush6/100, 0.5 * height - text_depth])
