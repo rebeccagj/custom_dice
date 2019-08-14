@@ -85,10 +85,10 @@ d8textdepth = 2.5;
 d10textdepth = 2.5;
 d00textdepth = 2.5;
 d12textdepth = 2.5;
-d20textdepth = 3.3;
+d20textdepth = 3.5;
 
 // text size multiplier as a % of cube height
-d4textsize = 23;
+d4textsize = 30;
 d6textsize = 55;
 d8textsize = 45;
 d10textsize = 37;
@@ -103,7 +103,7 @@ d12undersize = 25;
 d20undersize = 24;
 
 //offset numbers from the center of the dice as a% of dice height
-d4textpush = 25;
+d4textpush = 20;
 d10textpush = 16.5;
 
 //offset the 6 / 9 _ or .
@@ -121,7 +121,7 @@ d20underpush9 = -12;
 dice_to_draw = ["20"];
 
 //text d4
-d4text=["2", "2", "3", "4", "3", "2", "4", "2", "1", "4", "1", "3"]; 
+d4text=["1", "2", "3", "4", "3", "2", "4", "2", "1", "4", "1", "3"]; 
 
 //text d6 and d8
 textvals=["1", "2", "3", "4", "5", "6", "7", "8","9", "10", "11", "12", "13","14", "15","16", "17", "18", "19", "20"];
