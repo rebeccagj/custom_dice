@@ -70,7 +70,12 @@ font1 = "Gabriola";
 dicesize = 16; 
 
 //cube size coefficients
-
+d4size = 1.125*dicesize*1.224956;
+d6size = dicesize;
+d8size = dicesize;
+d10size = dicesize;
+d00size = dicesize;
+d12size = 1.125*dicesize;
 d20size = 1.25*dicesize;
 
 // digit depth, defined as% of the cube's height
@@ -115,11 +120,18 @@ d20underpush9 = -12;
 //dice_to_draw = ["4","6","8","10","00","12","20"];
 dice_to_draw = ["20"];
 
+//text d4
+d4text=["2", "2", "3", "4", "3", "2", "4", "2", "1", "4", "1", "3"]; 
 
-d4text=["2", "2", "3", "4", "3", "2", "4", "2", "1", "4", "1", "3"]; //text d4
-textvals=["1", "2", "3", "4", "5", "6", "7", "8","9", "10", "11", "12", "13","14", "15","16", "17", "18", "19", "20"];  //text d6 and d8
-dounderscore=[" ", " ", " ", ".  ", "   .", " ", " ", " ", " ", " ", " ", " "];      //underscore d12
-dotext=["2", "11", "4", "9", "6", "7", "5", "8", "3", "10"];                    //text d12
+//text d6 and d8
+textvals=["1", "2", "3", "4", "5", "6", "7", "8","9", "10", "11", "12", "13","14", "15","16", "17", "18", "19", "20"];
+
+//text d12
+d12text=["2", "11", "4", "9", "6", "7", "5", "8", "3", "10"];                    
+
+//underscore d12
+d12underscore=[" ", " ", " ", ".  ", "   .", " ", " ", " ", " ", " ", " ", " "];      
+
 d10underscore=[" ", ".  ", " ", " ", " ", " ", "   .", " ", " ", " ", " ", " "];     //underscore d10
 d00underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "];     //underscore d00
 d10text=["0", "9", "8", "1", "2", "7", "6", "3", "4", "5"];                       //text d10
@@ -427,23 +439,23 @@ module dice12text(height,slope) {
         rotate([slope, 0, 0]) {
             translate([0, 0, 0.5 * height - text_depth])
             linear_extrude(height)
-            text(dotext[i*2], size=text_multiplier, valign="center", halign="center", font=font1);
+            text(d12text[i*2], size=text_multiplier, valign="center", halign="center", font=font1);
 
             //podkreslnik pod 6
             translate([0, 0+(-height*d12underpush6/100), 0.5 * height - text_depth])
             linear_extrude(height)
-            text(dounderscore[i*2], size=under_multiplier, valign="center", halign="center", font=font1);
+            text(d12underscore[i*2], size=under_multiplier, valign="center", halign="center", font=font1);
 
             translate([0, 0, -0.5 * height + text_depth])
             rotate([0, 180, 180])
             linear_extrude(height)
-            text(dotext[i*2+1], size=text_multiplier, valign="center", halign="center", font=font1);
+            text(d12text[i*2+1], size=text_multiplier, valign="center", halign="center", font=font1);
 
             //podkreslnik pod 9
             translate([0, 0+(height*d12underpush9/100), -0.5 * height + text_depth])
             rotate([0, 180, 0])
             linear_extrude(height)
-            text(dounderscore[i*2 + 1], size=under_multiplier, valign="center", halign="center", font=font1);
+            text(d12underscore[i*2 + 1], size=under_multiplier, valign="center", halign="center", font=font1);
         }
     
 }
