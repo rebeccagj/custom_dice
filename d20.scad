@@ -94,13 +94,13 @@ d8textsize = 45;
 d10textsize = 37;
 d00textsize = 37;
 d12textsize = 31;
-d20textsize = 33;
+d20textsize = 32;
 
 //incremental scale
 d10undersize = 30;
 d00undersize = 35;
 d12undersize = 25;
-d20undersize = 24;
+d20undersize = 30;
 
 //offset numbers from the center of the dice as a% of dice height
 d4textpush = 20;
@@ -113,8 +113,8 @@ d00underpush6 = 25;
 d00underpush9 = 35;
 d12underpush6 = 13;
 d12underpush9 = 15;
-d20underpush6 = -12;
-d20underpush9 = -12;
+d20underpush6 = -10;
+d20underpush9 = -11;
 
 //What dices you would like to draw?
 //dice_to_draw = ["4","6","8","10","00","12","20"];
@@ -138,7 +138,7 @@ d10text=["0", "9", "8", "1", "2", "7", "6", "3", "4", "5"];                     
 d00text=["00", "90", "80", "10", "20", "70", "60", "30", "40", "50"];            //text d00
 underscore=[" ", " ", " ", " ", " ",
             " ", " ", " ", " ", " ",
-            "   .", " ", "   .", " ", " ",
+            "   .", " ", "  .", " ", " ",
             " ", " ", " ", " ", " "];        //underscore d20
 d20text=["12", "1", "16", "4", "20",
          "15", "3", "11", "17", "13", 
