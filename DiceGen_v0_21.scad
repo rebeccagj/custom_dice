@@ -82,9 +82,9 @@ d20();
 //config section
 
 //use <font.tff>
-usefont = "Cooper";
-useunderfont = "Courier New Bold";
-usesymbolfont = "SWAstro";
+usefont = "Berlin Sans FB";
+useunderfont = "Berlin Sans FB";
+usesymbolfont = "Courier New";
 
 dicesize=16;
 roundsize=0;
@@ -114,7 +114,7 @@ d8textsize = 40;
 d10textsize = 35;
 d00textsize = 35;
 d12textsize = 30;
-d20textsize = 20;
+d20textsize = 23;
 
 //underscore size ratio as % of dice size
 d4undersize = 17.5;
@@ -132,7 +132,7 @@ d8textpush = 0;
 d10textpush = -5;
 d00textpush = 0;
 d12textpush = 0;
-d20textpush = 0;
+d20textpush = 2;
 
 //underscore push ratio from center of face as % of dice size
 d4underpush = -15;
@@ -188,7 +188,11 @@ d12symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef
 d12underscore=[" ", "_", " ", " ", " ", " ", " ", " ", " ", " ", "_", " "]; //underscore d12
 d12rot=[0,0,0,0,0,0,0,0,0,0,0,0]; //rotating text d12
 
-d20text=["1", "19", "7", "13", "3", "17", "9", "11", "15", "5", "16", "6", "10", "12", "8","4", "18", "14", "20", "2"];  //text d20
+d20text=["12", "1", "16", "4", "20",
+         "15", "3", "11", "17", "13",
+         "6", "2", "9", "7", "18",
+         "8", "5", "19", "10", "14"];  //text d20
+
 d20symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d20
 d20underscore=[" ", " ", " ", " ", " ", " ", "_", " "," ", " ", " ", "_", " ", " ", " "," ", " ", " ", " ", " "]; //underscore d20
 d20rot=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];//rotating text d20
