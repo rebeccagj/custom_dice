@@ -69,19 +69,20 @@ When you would like to render results, hit F5 for preview, and if you are sure e
 
 //dice to draw, simply "//" before dice you don't want, like for example d8
 
-d4();
-right(2*dicesize) d6();
-right(4*dicesize) d8();
-right(6*dicesize) d10();
-right(8*dicesize) d00();
-right(10*dicesize) d12();
-right(12*dicesize) d20();
+//d4();
+//right(2*dicesize) d6();
+//right(4*dicesize) d8();
+//right(6*dicesize) d10();
+//right(8*dicesize) d00();
+//right(10*dicesize) d12();
+d20();
 
+// #*dicesize moves it in the plane, can adjust to more easily work on 1 dice
 
 //config section
 
 //use <font.tff>
-usefont = "Courier New Bold";
+usefont = "Cooper";
 useunderfont = "Courier New Bold";
 usesymbolfont = "SWAstro";
 

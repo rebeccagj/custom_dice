@@ -67,7 +67,7 @@ d8 - 1 - 5214
 */
 //use <font.tff>
 font1 = "Josefin Slab";
-dicesize = 16; 
+dicesize = 20; 
 
 //cube size coefficients
 d4size = 1.125*dicesize*1.224956;
