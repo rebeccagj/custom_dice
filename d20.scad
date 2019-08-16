@@ -66,7 +66,7 @@ d8 - 1 - 5214
 
 */
 //use <font.tff>
-font1 = "Gabriola";
+font1 = "Josefin Slab";
 dicesize = 16; 
 
 //cube size coefficients
@@ -85,7 +85,7 @@ d8textdepth = 2.5;
 d10textdepth = 2.5;
 d00textdepth = 2.5;
 d12textdepth = 2.5;
-d20textdepth = 3.5;
+d20textdepth = 4;
 
 // text size multiplier as a % of cube height
 d4textsize = 30;
@@ -94,7 +94,7 @@ d8textsize = 45;
 d10textsize = 37;
 d00textsize = 37;
 d12textsize = 31;
-d20textsize = 32;
+d20textsize = 25;
 
 //incremental scale
 d10undersize = 30;
