@@ -141,7 +141,7 @@ d8underpush = 25;
 d10underpush = 12.5;
 d00underpush = 0;
 d12underpush = 20;
-d20underpush = 15;
+d20underpush = 10;
 
 /*  pattern variables
 ------------------------------------------
@@ -193,8 +193,14 @@ d20text=["12", "1", "16", "4", "20",
          "6", "2", "9", "7", "18",
          "8", "5", "19", "10", "14"];  //text d20
 
-d20symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d20
-d20underscore=[" ", " ", " ", " ", " ", " ", "_", " "," ", " ", " ", "_", " ", " ", " "," ", " ", " ", " ", " "]; //underscore d20
+d20symbols=[undef, undef, undef, undef, undef,
+            undef, undef, undef, undef, undef, 
+            undef, undef, undef, undef, undef, 
+            undef, undef, undef, undef, undef]; //symbols d20
+d20underscore=[" ", " ", " ", " ", " ", 
+               " ", " ", " ", " ", " ", 
+               "   .", " ", "  .", " ", " ",
+               " ", " ", " ", " ", " "]; //underscore d20
 d20rot=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];//rotating text d20
 
 
