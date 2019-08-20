@@ -7,14 +7,11 @@
 ------------------------------------------
 I wanted to make this generator for easy dice making. I do not know if I will stay in this hobby, so don't guarantee to update this. But I belive that this work can make extremely easier make your own design. 
 
-If you try earlier versions, you probably found some minor or major bugs and deficiencies in functionality. Code are write from nothing but few ideas and conclusions from the past editions. Most of configuration section did not change in any way, but I add few features that you probably would like to use ;)
-
 This time I used BOSL2 librarys. They are huge and make OpenSCAD more affordable for me. They are still in APLHA state, but for code here, work amazingly good ;) Here are Revarbat's Github: https://github.com/revarbat/BOSL2
 
 About licensing. BOSL2 are on BSD 2-Clause License and I would like keep that for my work. License says:
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
 * Redistributions of source code must retain the above copyright notice, this
   list of conditions and the following disclaimer.
@@ -78,16 +75,16 @@ When you would like to render results, hit F5 for preview, and if you are sure e
 //right(6*dicesize) d10();
 //right(8*dicesize) d00();
 //right(10*dicesize) d12();
-//right(12*dicesize) d20();
 d20();
 
+// #*dicesize moves it in the plane, can adjust to more easily work on 1 dice
 
 //config section
 
 //use <font.tff>
-usefont = "Eras ITC";
-useunderfont = "Times";
-usesymbolfont = "Eras ITC";
+usefont = "Font 1 fixed";
+useunderfont = "Berlin Sans FB";
+usesymbolfont = "Courier New";
 
 dicesize=16;
 roundsize=0;
@@ -111,13 +108,13 @@ d12textdepth = 1;
 d20textdepth = 1;
 
 //text size ratio as % of dice size
-d4textsize = 20;
-d6textsize = 60;
-d8textsize = 50;
-d10textsize = 40;
-d00textsize = 25;
-d12textsize = 35;
-d20textsize = 22;
+d4textsize = 25;
+d6textsize = 45;
+d8textsize = 40;
+d10textsize = 35;
+d00textsize = 35;
+d12textsize = 30;
+d20textsize = 23;
 
 //underscore size ratio as % of dice size
 d4undersize = 17.5;
@@ -132,7 +129,7 @@ d20undersize = 25;
 d4textpush = -25;
 d6textpush = 0;
 d8textpush = 0;
-d10textpush = -7.5;
+d10textpush = -5;
 d00textpush = 0;
 d12textpush = 0;
 d20textpush = 2;
@@ -161,40 +158,40 @@ If you like dot instead underscore, write them after number in "dxtext" or "dxsy
 dXrot: variables with degree of rotation from original position of number.
 ------------------------------------------
 */
-d4text=["1", "2", "1", "1", "3", "3", "2", "2", undef, undef, undef, "3"]; //text d4
-d4symbols=[undef, undef, undef, undef, undef, undef, undef, undef, "a", "a", "a", undef]; //symbols d4
-d4underscore=["_", " ", "_", "_", " ", " ", " ", " ", " ", " ", " ", " "]; //underscore d4
+d4text=["1", "2", "1", "1", "3", "3", "2", "2", "4", "4", "4", "3"]; //text d4
+d4symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d4
+d4underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]; //underscore d4
 d4rot=[0,0,0,0 ,0,0,0,0 ,0,0,0,0]; //rotating text d4
 
-d6text=["1", "3", "2", "4", "5", undef]; //text d6
-d6symbols=[undef, undef, undef, undef, undef, "n"]; //symbols d6
-d6underscore=[" ", " ", " ", " ", " ", "_"]; //underscore d6
+d6text=["1", "3", "2", "4", "5", "6"]; //text d6
+d6symbols=[undef, undef, undef, undef, undef, undef]; //symbols d6
+d6underscore=[" ", " ", " ", " ", " ", " "]; //underscore d6
 d6rot=[0,0,0,0,0,0];//rotating text d6
 
-d8text=["1", "4", "7", "6", "5", undef, "2", "3"]; //text d8
-d8symbols=[undef, undef, undef, undef, undef, "s", undef, undef]; //symbols d8
-d8underscore=[" ", " ", " ", "_", " ", " ", " ", " "]; //underscore d8
+d8text=["1", "4", "7", "6", "5", "8", "2", "3"]; //text d8
+d8symbols=[undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d8
+d8underscore=[" ", " ", " ", " ", " ", " ", " ", " "]; //underscore d8
 d8rot=[0,0,0,0,0,0,0,0]; //rotating text d8
 
 
-d10text=["9", "1", "7", "5", "3", "6", "2", "4", undef, "8"]; //text d10
-d10symbols=[undef, undef, undef, undef, undef, undef, undef, undef, "M", undef]; //symbols d10
-d10underscore=["_", " ", " ", " ", " ", "_", " ", " ", " ", " ", " ", " "]; //underscore d10
-d00text=["90", "10", "70", "50", "30", "60", "20", "40", undef, "80"]; //text d00
-d00symbols=[undef, undef, undef, undef, undef, undef, undef, undef, "K", undef]; //symbols d00
+d10text=["9", "1", "7", "5", "3", "6", "2", "4", "10", "8"]; //text d10
+d10symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d10
+d10underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]; //underscore d10
+d00text=["90", "10", "70", "50", "30", "60", "20", "40", "00", "80"]; //text d00
+d00symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d00
 d00underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]; //underscore d00
 d10d00rot=[0,0,0,0,0,0,0,0,0,0];//rotating text d10 and d00
 
 
-d12text=["1", "6", "4", "2", "5", "10", "3", "8", "11", "7", "9", undef]; //text d12
-d12symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, "Q"]; //symbols d12
+d12text=["1", "6", "4", "2", "5", "10", "3", "8", "11", "7", "9", "12"]; //text d12
+d12symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d12
 d12underscore=[" ", "_", " ", " ", " ", " ", " ", " ", " ", " ", "_", " "]; //underscore d12
 d12rot=[0,0,0,0,0,0,0,0,0,0,0,0]; //rotating text d12
 
-d20text=["12", "1", "16", "4", "20", "15", "3", "11", "17", "13", "6", "2", "9", "7", "18", "8", "5", "19", "10", "14"];  //text d20
+d20text=["18", "2", "4", "5", "20", "14", "12", "15", "11", "13", "8", "10", "6", "9", "16", "7", "1", "17", "3", "19"];  //text d20
 d20symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d20
-d20underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "   .", " ", "  .", " ", " ", " ", " ", " ", " ", " "]; //underscore d20
-d20rot=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];//rotating text d20
+d20underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]; //underscore d20
+d20rot=[0,0,0,0,0,0,0,0,0,0,0,0,180,180,0,0,0,0,0,0];//rotating text d20
 
 
 
