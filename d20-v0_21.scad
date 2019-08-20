@@ -83,6 +83,7 @@ d20();
 
 //use <font.tff>
 usefont = "Font 1 fixed";
+// font from Elizabeth Comer
 useunderfont = "Berlin Sans FB";
 usesymbolfont = "Courier New";
 
@@ -188,10 +189,11 @@ d12symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef
 d12underscore=[" ", "_", " ", " ", " ", " ", " ", " ", " ", " ", "_", " "]; //underscore d12
 d12rot=[0,0,0,0,0,0,0,0,0,0,0,0]; //rotating text d12
 
-d20text=["18", "2", "4", "5", "20", "14", "12", "15", "11", "13", "8", "10", "6", "9", "16", "7", "1", "17", "3", "19"];  //text d20
+d20text=["18", "2", "4", "5", "20", "14", "12", "15", "11", "13", "8", "10", "6 ", "9", "16", "7", "1", "17", "3", "19"];  //text d20
 d20symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d20
-d20underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]; //underscore d20
-d20rot=[0,0,0,0,0,0,0,0,0,0,0,0,180,180,0,0,0,0,0,0];//rotating text d20
+//d20underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "  .", "  .", " ", " ", " ", " ", " ", " "]; //underscore d20
+d20underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "  .", "  .", " ", " ", " ", " ", " ", " "]; //underscore d20
+d20rot=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];//rotating text d20
 
 
 
