@@ -76,7 +76,9 @@ When you would like to render results, hit F5 for preview, and if you are sure e
 //left(4*dicesize) d00();
 //left(6*dicesize) d12();
 //right(12*dicesize) d20();
-d12();
+d00();
+left(2*dicesize) d10();
+
 
 // #*dicesize moves it in the plane, can adjust to more easily work on 1 dice
 
