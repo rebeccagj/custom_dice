@@ -74,8 +74,8 @@ When you would like to render results, hit F5 for preview, and if you are sure e
 //right(4*dicesize) d8();
 //right(6*dicesize) d10();
 //right(8*dicesize) d00();
+d8();
 //right(10*dicesize) d12();
-d12();
 //right(12*dicesize) d20();
 
 // #*dicesize moves it in the plane, can adjust to more easily work on 1 dice
@@ -170,7 +170,7 @@ d6symbols=[undef, undef, undef, undef, undef, undef]; //symbols d6
 d6underscore=[" ", " ", " ", " ", " ", " "]; //underscore d6
 d6rot=[0,0,0,0,0,0];//rotating text d6
 
-d8text=["1", "4", "7", "6", "5", "8", "2", "3"]; //text d8
+d8text=["1", "3", "2", "4", "5", "7", "8", "6"]; //text d8
 d8symbols=[undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d8
 d8underscore=[" ", " ", " ", " ", " ", " ", " ", " "]; //underscore d8
 d8rot=[0,0,0,0,0,0,0,0]; //rotating text d8
@@ -187,7 +187,7 @@ d10d00rot=[0,0,0,0,0,0,0,0,0,0];//rotating text d10 and d00
 
 d12text=["1", "5", "6.", "4", "10", "11", "2", "3", "9.", "8", "7", "12"]; //text d12
 d12symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d12
-d12underscore=[" ", "   ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]; //underscore d12
+d12underscore=[" ", "   ", " ", " ", " ", " ", " ", " ", "  ", " ", " ", " "]; //underscore d12
 d12rot=[0,0,0,0,0,0,0,0,0,0,0,0]; //rotating text d12
 
 d20text=["18", "2", "4", "5", "20", "14", "12", "15", "11", "13", "8", "10", "6 ", "9", "16", "7", "1", "17", "3", "19"];  //text d20
