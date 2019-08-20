@@ -66,7 +66,7 @@ d8 - 1 - 5214
 
 */
 //use <font.tff>
-font1 = "Josefin Slab";
+font1 = "Times New Roman Bold";
 dicesize = 20; 
 
 //cube size coefficients
