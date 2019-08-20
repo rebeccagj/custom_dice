@@ -86,8 +86,8 @@ d20();
 
 //use <font.tff>
 usefont = "Eras ITC";
-useunderfont = "Times New Roman";
-usesymbolfont = "SWAstro";
+useunderfont = "Times";
+usesymbolfont = "Eras ITC";
 
 dicesize=16;
 roundsize=0;
