@@ -69,13 +69,12 @@ When you would like to render results, hit F5 for preview, and if you are sure e
 
 //dice to draw, simply "//" before dice you don't want, like for example d8
 
-//d4();
-//right(2*dicesize) d6();
-//right(4*dicesize) d8();
-//right(6*dicesize) d10();
-//right(8*dicesize) d00();
-d8();
-//right(10*dicesize) d12();
+d4();
+right(2*dicesize) d6();
+right(4*dicesize) d8();
+left(2*dicesize) d10();
+left(4*dicesize) d00();
+left(6*dicesize) d12();
 //right(12*dicesize) d20();
 
 // #*dicesize moves it in the plane, can adjust to more easily work on 1 dice
@@ -160,7 +159,7 @@ If you like dot instead underscore, write them after number in "dxtext" or "dxsy
 dXrot: variables with degree of rotation from original position of number.
 ------------------------------------------
 */
-d4text=["1", "2", "1", "1", "3", "3", "2", "2", "4", "4", "4", "3"]; //text d4
+d4text=["1", "4", "1", "1", "3", "3", "4", "4", "2", "2", "2", "3"]; //text d4
 d4symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d4
 d4underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]; //underscore d4
 d4rot=[0,0,0,0 ,0,0,0,0 ,0,0,0,0]; //rotating text d4
