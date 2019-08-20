@@ -75,7 +75,8 @@ When you would like to render results, hit F5 for preview, and if you are sure e
 //right(6*dicesize) d10();
 //right(8*dicesize) d00();
 //right(10*dicesize) d12();
-d20();
+d12();
+//right(12*dicesize) d20();
 
 // #*dicesize moves it in the plane, can adjust to more easily work on 1 dice
 
@@ -109,11 +110,11 @@ d12textdepth = 1;
 d20textdepth = 1;
 
 //text size ratio as % of dice size
-d4textsize = 25;
-d6textsize = 45;
-d8textsize = 40;
-d10textsize = 35;
-d00textsize = 35;
+d4textsize = 23;
+d6textsize = 35;
+d8textsize = 35;
+d10textsize = 30;
+d00textsize = 30;
 d12textsize = 30;
 d20textsize = 23;
 
@@ -141,7 +142,7 @@ d6underpush = 30;
 d8underpush = 25;
 d10underpush = 12.5;
 d00underpush = 0;
-d12underpush = 20;
+d12underpush = 12;
 d20underpush = 10;
 
 /*  pattern variables
@@ -175,7 +176,7 @@ d8underscore=[" ", " ", " ", " ", " ", " ", " ", " "]; //underscore d8
 d8rot=[0,0,0,0,0,0,0,0]; //rotating text d8
 
 
-d10text=["9", "1", "7", "5", "3", "6", "2", "4", "10", "8"]; //text d10
+d10text=["9.", "1", "7", "5", "3", "6.", "2", "4", "10", "8"]; //text d10
 d10symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d10
 d10underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]; //underscore d10
 d00text=["90", "10", "70", "50", "30", "60", "20", "40", "00", "80"]; //text d00
@@ -184,9 +185,9 @@ d00underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]; //un
 d10d00rot=[0,0,0,0,0,0,0,0,0,0];//rotating text d10 and d00
 
 
-d12text=["1", "6", "4", "2", "5", "10", "3", "8", "11", "7", "9", "12"]; //text d12
+d12text=["1", "5", "6.", "4", "10", "11", "2", "3", "9.", "8", "7", "12"]; //text d12
 d12symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d12
-d12underscore=[" ", "_", " ", " ", " ", " ", " ", " ", " ", " ", "_", " "]; //underscore d12
+d12underscore=[" ", "   ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]; //underscore d12
 d12rot=[0,0,0,0,0,0,0,0,0,0,0,0]; //rotating text d12
 
 d20text=["18", "2", "4", "5", "20", "14", "12", "15", "11", "13", "8", "10", "6 ", "9", "16", "7", "1", "17", "3", "19"];  //text d20
