@@ -75,3 +75,14 @@ difference(){ // difference will subtract the second object from the first
     }
 }
 }
+translate([0,0,-2]){
+    rotate([0,0,45]){
+cylinder(2,3,8.5,$fn=4);
+}
+}
+
+translate([20,0,-2]){
+    rotate([0,0,45]){
+cylinder(2,3,7,$fn=4);
+}
+}
