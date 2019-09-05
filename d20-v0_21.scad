@@ -69,16 +69,16 @@ When you would like to render results, hit F5 for preview, and if you are sure e
 
 //dice to draw, simply "//" before dice you don't want, like for example d8
 
-d4();
+/*d4();
 right(1.5*dicesize) d6();
 right(3*dicesize) d8();
 left(1.5*dicesize) d10();
 left(3*dicesize) d00();
 left(4.6*dicesize) d12();
 right(4.6*dicesize) d20();
-//d00();
-//left(2*dicesize) d10();
-
+d00();
+left(2*dicesize) d10();*/
+d20();
 
 // #*dicesize moves it in the plane, can adjust to more easily work on 1 dice
 
@@ -109,7 +109,7 @@ d8textdepth = 1;
 d10textdepth = 1;
 d00textdepth = 1;
 d12textdepth = 1;
-d20textdepth = 1;
+d20textdepth = 1.5;
 
 //text size ratio as % of dice size
 d4textsize = 23;
