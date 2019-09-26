@@ -75,14 +75,52 @@ difference(){ // difference will subtract the second object from the first
     }
 }
 }
+
+//beveled bottom for larger dice
 translate([0,0,-2]){
     rotate([0,0,45]){
-cylinder(2,3,8.5,$fn=4);
+cylinder(2,2,8.5,$fn=4);
 }
 }
 
+//beveled bottom for smaller dice
 translate([20,0,-2]){
     rotate([0,0,45]){
 cylinder(2,3,7,$fn=4);
 }
 }
+
+translate([0,0,-4]){rotate([0,0,45]){
+cylinder(h=4,r=1.2,$fn=4,center=true);
+}}
+
+cubeside = 3;
+cubeheight = 1.7;
+
+module rhombus(){
+    union(){
+        difference(){
+        cube([cubeside,cubeside,cubeheight]);
+        rotate([0,0,45])cube([50,50,50]);
+    }
+    translate([cubeside,0,0]){
+        difference(){
+        cube([cubeside,cubeside,cubeheight]);
+        rotate([0,0,-45])cube([50,50,50]);
+    }}}}
+
+mirror()translate([.85,.85,-3])rotate([90,90,0]){
+rhombus();
+}
+translate([.85,.85,-3])rotate([90,90,0]){
+rhombus();
+}
+
+rotate([0,0,90]){
+translate([.85,.85,-3])rotate([90,90,0]){
+rhombus();
+}}
+rotate([0,0,-90]){
+translate([.85,.85,-3])rotate([90,90,0]){
+rhombus();
+}}

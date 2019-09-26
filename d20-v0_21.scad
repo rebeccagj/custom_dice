@@ -78,8 +78,10 @@ left(4.6*dicesize) d12();
 right(4.6*dicesize) d20();
 d00();
 left(2*dicesize) d10();*/
-d20();
 
+d00();
+right(1.5*dicesize) d10();
+    
 // #*dicesize moves it in the plane, can adjust to more easily work on 1 dice
 
 //config section
@@ -103,12 +105,12 @@ d12size = 1.125*dicesize;
 d20size = 1.25*dicesize;
 
 //depth of numbers in w mm
-d4textdepth = 1;
-d6textdepth = 1;
-d8textdepth = 1;
-d10textdepth = 1;
-d00textdepth = 1;
-d12textdepth = 1;
+d4textdepth = 1.5;
+d6textdepth = 1.5;
+d8textdepth = 1.5;
+d10textdepth = 1.5;
+d00textdepth = 1.5;
+d12textdepth = 1.5;
 d20textdepth = 1.5;
 
 //text size ratio as % of dice size
