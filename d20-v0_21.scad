@@ -3,71 +3,11 @@
 // By Czertwy - FreeBSD / BSD 2-Clause License
 //------------------------------------------
 
-/* A few words from me
-------------------------------------------
-I wanted to make this generator for easy dice making. I do not know if I will stay in this hobby, so don't guarantee to update this. But I belive that this work can make extremely easier make your own design. 
-
-This time I used BOSL2 librarys. They are huge and make OpenSCAD more affordable for me. They are still in APLHA state, but for code here, work amazingly good ;) Here are Revarbat's Github: https://github.com/revarbat/BOSL2
-
-About licensing. BOSL2 are on BSD 2-Clause License and I would like keep that for my work. License says:
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
-
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-So, you can used them as you want, with commercial use included.
-
-Happy dicemaking!
-------------------------------------------
-*/
 include <BOSL2/std.scad>
 include <BOSL2/polyhedra.scad>
 $fn = $preview ? 30 : 100 ;
 
-/* How to customize your set
-------------------------------------------
-You have a lot of parameters to play with:
-
-//use <font.tff> - you can use font from file, instead from system. You still need proper font name in next variable
-
-usefont/useunderfont/usesymbolfont - global variable for your font, you need to instal that font in system, or use from file as above
-
-dicesize - global variable for entire set
-
-roundsize - global variable for rounding edges of dices. If "0", edges will be sharp.
-
-dXsize - size of each dice. After measuring and 3D printing, I came to that sizes, they have best proportions for me.
-
-dXtextdepth - in mm. They tell you how deep numbers are. Watch out for d4, if numbers are to close to corner or edge, they can easly intersect between walls!
-
-dXtextsize - % of dXsize. Simply, how big numbers are.
-
-dXundersize - as above, just for underscores.
-
-dXtextpush - some of dices have asymmetrical walls, this is offset for placing numbers and this is mainly for them (d4/d10/d00). "0" means that number are in center of assigned face. Positive values move number down, and negative - up.
-dXunderpush - as above, for underscores.
-
-When you would like to render results, hit F5 for preview, and if you are sure enough, hit F6. Because of the rounding possibility, render time are much longer than simply preview.
-------------------------------------------
-*/
-
-//dice to draw, simply "//" before dice you don't want, like for example d8
+//dice to draw
 
 /*d4();
 right(1.5*dicesize) d6();
@@ -75,20 +15,12 @@ right(3*dicesize) d8();
 left(1.5*dicesize) d10();
 left(3*dicesize) d00();
 left(4.6*dicesize) d12();
-right(4.6*dicesize) d20();
-d00();
-left(2*dicesize) d10();*/
-
-d00();
-right(1.5*dicesize) d10();
+right(4.6*dicesize) */d20();
     
 // #*dicesize moves it in the plane, can adjust to more easily work on 1 dice
 
 //config section
-
-//use <font.tff>
-usefont = "Font 1 fixed";
-// font from Elizabeth Comer
+usefont = "Fabrik";
 useunderfont = "Berlin Sans FB";
 usesymbolfont = "Courier New";
 
@@ -105,13 +37,14 @@ d12size = 1.125*dicesize;
 d20size = 1.25*dicesize;
 
 //depth of numbers in w mm
-d4textdepth = 1.5;
-d6textdepth = 1.5;
-d8textdepth = 1.5;
-d10textdepth = 1.5;
-d00textdepth = 1.5;
-d12textdepth = 1.5;
-d20textdepth = 1.5;
+depth = 1;
+d4textdepth = depth;
+d6textdepth = depth;
+d8textdepth = depth;
+d10textdepth = depth;
+d00textdepth = depth;
+d12textdepth = depth;
+d20textdepth = depth;
 
 //text size ratio as % of dice size
 d4textsize = 23;
@@ -120,7 +53,7 @@ d8textsize = 35;
 d10textsize = 30;
 d00textsize = 30;
 d12textsize = 30;
-d20textsize = 23;
+d20textsize = 25;
 
 //underscore size ratio as % of dice size
 d4undersize = 17.5;
