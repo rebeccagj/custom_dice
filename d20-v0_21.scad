@@ -47,13 +47,13 @@ d12textdepth = depth;
 d20textdepth = depth;
 
 //text size ratio as % of dice size
-d4textsize = 23;
-d6textsize = 35;
-d8textsize = 35;
+d4textsize = 25;
+d6textsize = 40;
+d8textsize = 40;
 d10textsize = 30;
 d00textsize = 30;
 d12textsize = 30;
-d20textsize = 25;
+d20textsize = 23;
 
 //underscore size ratio as % of dice size
 d4undersize = 17.5;
