@@ -24,20 +24,20 @@ usefont = "Fabrik";
 useunderfont = "Fabrik";
 usesymbolfont = "Fabrik";
 
-dicesize=16;
+dicesize=6;
 roundsize=0;
 
 //dice size in mm
-d4size = 18;
-d6size = 16;
-d8size = 16;
-d10size = 16;
-d00size = 16;
-d12size = 18;
-d20size = 20;
+d4size = 6.5;
+d6size = 6;
+d8size = 6;
+d10size = 6;
+d00size = 6;
+d12size = 7;
+d20size = 8;
 
 //depth of numbers in w mm
-depth = 1;
+depth = 0.6;
 d4textdepth = depth;
 d6textdepth = depth;
 d8textdepth = depth;
@@ -52,7 +52,7 @@ d6textsize = 45;
 d8textsize = 40;
 d10textsize = 30;
 d00textsize = 30;
-d12textsize = 30;
+d12textsize = 44;
 d20textsize = 23;
 
 //underscore size ratio as % of dice size
@@ -119,8 +119,9 @@ d10underscore=["  .", "", "", "", "", "   .", "", "", "", "", "", ""]; //undersc
 d00text=["90", "10", "70", "50", "30", "60", "20", "40", "00", "80"]; //text d00
 d00symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d00
 d00underscore=["", "", "", "", "", "", "", "", "", "", "", ""]; //underscore d00
-d10d00rot=[0,0,0,0,0,0,0,0,0,0];//rotating text d10 and d00
+d10rot=[0,0,0,0,0,0,0,0,0,0];//rotating text d10
 
+d00rot=[90,90,90,90,90,90,90,90,90,90];//rotating text d00
 
 d12text=["1", "5", "6.", "4", "10", "11", "2", "3", "9", "8", "7", "12"]; //text d12
 d12symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d12
@@ -248,21 +249,21 @@ difference(){
     
     //render numbers
     regular_polyhedron("trapezohedron",faces=10, side=0.4857*dicesize, longside=dicesize, facedown=true, anchor=BOTTOM, draw=false)
-    zrot(d10d00rot[$faceindex]+based10d00rot[$faceindex])
+    zrot(d10rot[$faceindex]+based10d00rot[$faceindex])
     down(d10textdepth) linear_extrude(height=2*d10textdepth)
     fwd(d10textpush*d10size/100)
     text(d10text[$faceindex], size=text_multiplier, font=usefont, halign="center",valign="center");
     
     //render symbols
     regular_polyhedron("trapezohedron",faces=10, side=0.4857*dicesize, longside=dicesize, facedown=true, anchor=BOTTOM, draw=false)
-    zrot(d10d00rot[$faceindex]+based10d00rot[$faceindex])
+    zrot(d10rot[$faceindex]+based10d00rot[$faceindex])
     down(d10textdepth) linear_extrude(height=2*d10textdepth)
     fwd(d10textpush*d10size/100)
     text(d10symbols[$faceindex], size=text_multiplier, font=usesymbolfont, halign="center",valign="center");
     
     //render underscore
     regular_polyhedron("trapezohedron",faces=10, side=0.4857*dicesize, longside=dicesize, facedown=true, anchor=BOTTOM, draw=false)
-    zrot(d10d00rot[$faceindex]+based10d00rot[$faceindex])
+    zrot(d10rot[$faceindex]+based10d00rot[$faceindex])
     down(d10textdepth) linear_extrude(height=2*d10textdepth)
     fwd(d10underpush*d10size/100)
     text(d10underscore[$faceindex], size=under_multiplier, font=useunderfont, halign="center",valign="center");
@@ -280,21 +281,21 @@ difference(){
     
     //render numbers
     regular_polyhedron("trapezohedron",faces=10, side=0.4857*dicesize, longside=dicesize, facedown=true, anchor=BOTTOM, draw=false)
-    zrot(d10d00rot[$faceindex]+based10d00rot[$faceindex])
+    zrot(d00rot[$faceindex]+based10d00rot[$faceindex])
     down(d00textdepth) linear_extrude(height=2*d00textdepth)
     fwd(d00textpush*d00size/100)
     text(d00text[$faceindex], size=text_multiplier, font=usefont, halign="center",valign="center");
     
     //render symbols
     regular_polyhedron("trapezohedron",faces=10, side=0.4857*dicesize, longside=dicesize, facedown=true, anchor=BOTTOM, draw=false)
-    zrot(d10d00rot[$faceindex]+based10d00rot[$faceindex])
+    zrot(d00rot[$faceindex]+based10d00rot[$faceindex])
     down(d00textdepth) linear_extrude(height=2*d00textdepth)
     fwd(d00textpush*d00size/100)
     text(d00symbols[$faceindex], size=text_multiplier, font=usesymbolfont, halign="center",valign="center");
     
     //render underscore
     regular_polyhedron("trapezohedron",faces=10, side=0.4857*dicesize, longside=dicesize, facedown=true, anchor=BOTTOM, draw=false)
-    zrot(d10d00rot[$faceindex]+based10d00rot[$faceindex])
+    zrot(d00rot[$faceindex]+based10d00rot[$faceindex])
     down(d00textdepth) linear_extrude(height=2*d00textdepth)
     fwd(d00underpush*d00size/100)
     text(d00underscore[$faceindex], size=under_multiplier, font=useunderfont, halign="center",valign="center");

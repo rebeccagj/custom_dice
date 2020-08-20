@@ -72,13 +72,15 @@ When you would like to render results, hit F5 for preview, and if you are sure e
 
 //dice to draw, simply "//" before dice you don't want, like for example d8
 
-d4();
-right(2*dicesize) d6();
+//d4();
+//right(2*dicesize) d6();
 //right(4*dicesize) d8();
-right(6*dicesize) d10();
-right(8*dicesize) d00();
-right(10*dicesize) d12();
-right(12*dicesize) d20();
+//right(6*dicesize) d10();
+//right(8*dicesize) 
+d00();
+//right(10*dicesize) d12();
+//right(12*dicesize) 
+//d20();
 
 
 //config section
@@ -89,7 +91,7 @@ useunderfont = "Courier New Bold";
 usesymbolfont = "SWAstro";
 
 dicesize=16;
-roundsize=2;
+roundsize=0;
 
 //dice size ratio
 d4size = 1.125*dicesize;
@@ -160,8 +162,8 @@ If you like dot instead underscore, write them after number in "dxtext" or "dxsy
 dXrot: variables with degree of rotation from original position of number.
 ------------------------------------------
 */
-d4text=["1", "2", "1", "1", "3", "3", "2", "2", undef, undef, undef, "3"]; //text d4
-d4symbols=[undef, undef, undef, undef, undef, undef, undef, undef, "a", "a", "a", undef]; //symbols d4
+d4text=["1", "2", "1", "1", "3", "3", "2", "2", "4", "4", undef, "3"]; //text d4
+d4symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d4
 d4underscore=["_", " ", "_", "_", " ", " ", " ", " ", " ", " ", " ", " "]; //underscore d4
 d4rot=[0,0,0,0 ,0,0,0,0 ,0,0,0,0]; //rotating text d4
 
@@ -179,10 +181,10 @@ d8rot=[0,0,0,0,0,0,0,0]; //rotating text d8
 d10text=["9", "1", "7", "5", "3", "6", "2", "4", undef, "8"]; //text d10
 d10symbols=[undef, undef, undef, undef, undef, undef, undef, undef, "M", undef]; //symbols d10
 d10underscore=["_", " ", " ", " ", " ", "_", " ", " ", " ", " ", " ", " "]; //underscore d10
-d00text=["90", "10", "70", "50", "30", "60", "20", "40", undef, "80"]; //text d00
-d00symbols=[undef, undef, undef, undef, undef, undef, undef, undef, "K", undef]; //symbols d00
+d00text=["90", "10", "70", "50", "30", "60", "20", "40", "00", "80"]; //text d00
+d00symbols=[undef, undef, undef, undef, undef, undef, undef, undef, undef, undef]; //symbols d00
 d00underscore=[" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]; //underscore d00
-d10d00rot=[0,0,0,0,0,0,0,0,0,0];//rotating text d10 and d00
+d10d00rot=[90,90,90,90,90,90,90,90,90,90];//rotating text d10 and d00
 
 
 d12text=["1", "6", "4", "2", "5", "10", "3", "8", "11", "7", "9", undef]; //text d12

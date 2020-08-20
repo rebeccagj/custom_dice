@@ -24,7 +24,7 @@ usefont = "Fabrik";
 useunderfont = "Berlin Sans FB";
 usesymbolfont = "Courier New";
 
-dicesize=16;
+dicesize=55;
 roundsize=0;
 
 //dice size ratio
